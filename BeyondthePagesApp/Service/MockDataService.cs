@@ -29,7 +29,7 @@ namespace BeyondthePagesApp.Service
                 MaritalStatus = MaritalStatus.Single,
                 BirthDate = new DateTime(1989, 3, 11),
                 City = "Brussels",
-                Email = "bethany@bethanyspieshop.com",
+                Email = "bethany@gmail.com",
                 EmployeeId = 1,
                 FirstName = "Bethany",
                 LastName = "Smith",
@@ -53,7 +53,7 @@ namespace BeyondthePagesApp.Service
                 MaritalStatus = MaritalStatus.Married,
                 BirthDate = new DateTime(1979, 1, 16),
                 City = "Antwerp",
-                Email = "gill@bethanyspieshop.com",
+                Email = "gill@gmail.com",
                 EmployeeId = 2,
                 FirstName = "Gill",
                 LastName = "Cleeren",
@@ -72,7 +72,31 @@ namespace BeyondthePagesApp.Service
                 IsOnHoliday = false
             };
 
-            return [e1, e2];
+            var e3 = new Employee
+            {
+                MaritalStatus = MaritalStatus.Married,
+                BirthDate = new DateTime(1981, 1, 16),
+                City = "Antwerp",
+                Email = "teste@gmail.com",
+                EmployeeId = 2,
+                FirstName = "Test",
+                LastName = string.Empty,
+                Gender = Gender.Female,
+                PhoneNumber = "33999909923",
+                Smoker = false,
+                Street = "New Street",
+                Zip = "2000",
+                JobCategory = _jobCategories[1],
+                JobCategoryId = _jobCategories[1].JobCategoryId,
+                Comment = "Lorem Ipsum",
+                ExitDate = null,
+                JoinedDate = new DateTime(2017, 12, 24),
+                Country = _countries[1],
+                CountryId = _countries[1].CountryId,
+                IsOnHoliday = false
+            };
+
+            return [e1, e2, e3];
         }
 
         private static List<JobCategory> InitializeMockJobCategories() => [
