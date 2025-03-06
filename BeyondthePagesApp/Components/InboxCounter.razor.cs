@@ -1,18 +1,18 @@
 ﻿using BeyondthePagesApp.State;
 using Microsoft.AspNetCore.Components;
 
-namespace BeyondthePagesApp.Components.Widgets
+namespace BeyondthePagesApp.Components
 {
-    public partial class InboxWidget
+    public partial class InboxCounter
     {
         [Inject]
         public ApplicationState ApplicationState { get; set; }
-
-        public int MessageCount { get; set; } = 0;
+        private int MessageCount;
 
         protected override void OnInitialized()
         {
-            MessageCount = ApplicationState.NumberOfMessages;
+            MessageCount = new Random().Next(10);
+            ApplicationState.NumberOfMessages = MessageCount;
         }
     }
 }

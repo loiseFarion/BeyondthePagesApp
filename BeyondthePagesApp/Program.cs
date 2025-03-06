@@ -1,10 +1,27 @@
+using BeyondthePagesAdd.Repositories;
 using BeyondthePagesApp.Components;
+using BeyondthePagesApp.Data;
+using BeyondthePagesApp.Interfaces.Repositories;
+using BeyondthePagesApp.Interfaces.Services;
+using BeyondthePagesApp.Repositories;
+using BeyondthePagesApp.Service;
+using BeyondthePagesApp.State;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddDbContextFactory<AddDbContext>(options => options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConection"]));
+
+builder.Services.AddScoped<IEmployeeRepository,EmployeeRepository>();
+builder.Services.AddScoped<ITimeRegistrationRepository,TimeRegistrationRepository>();
+
+builder.Services.AddScoped<IEmployeeDataService,EmployeeDataService>();
+builder.Services.AddScoped<ITimeRegistrationDataService,TimeRegistrationDataService>();
+builder.Services.AddScoped<ApplicationState>();
 
 var app = builder.Build();
 

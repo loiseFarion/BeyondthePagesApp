@@ -1,5 +1,7 @@
-﻿using BeyondthePagesApp.Library.Domain;
+﻿using BeyondthePagesApp.Interfaces.Services;
+using BeyondthePagesApp.Library.Domain;
 using BeyondthePagesApp.Service;
+using Microsoft.AspNetCore.Components;
 
 namespace BeyondthePagesApp.Components.Pages
 {
@@ -10,10 +12,12 @@ namespace BeyondthePagesApp.Components.Pages
 
         private string Title = "Employee overview";
 
+        [Inject]
+        public IEmployeeDataService? EmployeeDataService { get; set; }
+
         protected async override Task OnInitializedAsync()
         {
-            await Task.Delay(2000);
-            Employees = MockDataService.Employees;
+            Employees = (await EmployeeDataService.GetAllEmployess()).ToList();
         }
 
         public void ShowQuickViewPopup(Employee selectedEmployee)
