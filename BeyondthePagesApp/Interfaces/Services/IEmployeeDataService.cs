@@ -6,5 +6,8 @@ namespace BeyondthePagesApp.Interfaces.Services
     {
         Task<IEnumerable<Employee>> GetAllEmployess();
         Task<Employee> GetEmployeeById(int id);
+        Task<Employee> AddEmployee(Employee employee);
+        Task UpdateEmployee(Employee employee);
+        Task DeleteEmployee(int id);
     }
 }

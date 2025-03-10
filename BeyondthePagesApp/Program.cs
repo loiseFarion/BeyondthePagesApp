@@ -3,6 +3,7 @@ using BeyondthePagesApp.Components;
 using BeyondthePagesApp.Data;
 using BeyondthePagesApp.Interfaces.Repositories;
 using BeyondthePagesApp.Interfaces.Services;
+using BeyondthePagesApp.Library.Domain;
 using BeyondthePagesApp.Repositories;
 using BeyondthePagesApp.Service;
 using BeyondthePagesApp.State;
@@ -18,10 +19,16 @@ builder.Services.AddDbContextFactory<AddDbContext>(options => options.UseSqlServ
 
 builder.Services.AddScoped<IEmployeeRepository,EmployeeRepository>();
 builder.Services.AddScoped<ITimeRegistrationRepository,TimeRegistrationRepository>();
+builder.Services.AddScoped<ICountryRepository,CountryRepository>();
+builder.Services.AddScoped<IJobCategoryRepository,JobCategoryRepository>();
 
 builder.Services.AddScoped<IEmployeeDataService,EmployeeDataService>();
 builder.Services.AddScoped<ITimeRegistrationDataService,TimeRegistrationDataService>();
+builder.Services.AddScoped<IJobCategoryDataService, JobCategoryDataService>();
+builder.Services.AddScoped<ICountryDataService, CountryDataService>();
 builder.Services.AddScoped<ApplicationState>();
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 var app = builder.Build();
 
