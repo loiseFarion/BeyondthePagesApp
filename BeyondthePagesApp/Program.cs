@@ -1,4 +1,5 @@
 using BeyondthePagesAdd.Repositories;
+using BeyondthePagesApp.Client;
 using BeyondthePagesApp.Components;
 using BeyondthePagesApp.Data;
 using BeyondthePagesApp.Interfaces.Repositories;
@@ -13,7 +14,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddDbContextFactory<AddDbContext>(options => options.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConection"]));
 
@@ -46,6 +48,9 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+    .AddInteractiveServerRenderMode()
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(BeyondthePagesApp.Client._Imports).Assembly);
 
+app.MapGet("api/employee", async(IEmployeeDataService employeeDataService) => await employeeDataService.GetAllEmployess());
 app.Run();

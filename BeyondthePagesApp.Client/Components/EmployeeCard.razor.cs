@@ -1,7 +1,7 @@
 ﻿using BeyondthePagesApp.Library.Domain;
 using Microsoft.AspNetCore.Components;
 
-namespace BeyondthePagesApp.Components
+namespace BeyondthePagesApp.Client.Components
 {
     public partial class EmployeeCard
     {

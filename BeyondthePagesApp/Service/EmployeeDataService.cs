@@ -1,5 +1,5 @@
-﻿using BeyondthePagesApp.Interfaces.Repositories;
-using BeyondthePagesApp.Interfaces.Services;
+﻿using BeyondthePagesApp.Client;
+using BeyondthePagesApp.Interfaces.Repositories;
 using BeyondthePagesApp.Library.Domain;
 
 namespace BeyondthePagesApp.Service

@@ -1,9 +1,7 @@
-﻿using BeyondthePagesApp.Interfaces.Services;
-using BeyondthePagesApp.Library.Domain;
-using BeyondthePagesApp.Service;
+﻿using BeyondthePagesApp.Library.Domain;
 using Microsoft.AspNetCore.Components;
 
-namespace BeyondthePagesApp.Components.Pages
+namespace BeyondthePagesApp.Client.Pages
 {
     public partial class EmployeeOverview
     {

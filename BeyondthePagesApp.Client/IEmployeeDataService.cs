@@ -1,6 +1,6 @@
 ﻿using BeyondthePagesApp.Library.Domain;
 
-namespace BeyondthePagesApp.Interfaces.Services
+namespace BeyondthePagesApp.Client
 {
     public interface IEmployeeDataService
     {

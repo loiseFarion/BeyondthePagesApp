@@ -1,4 +1,4 @@
-﻿using BeyondthePagesApp.Interfaces.Services;
+﻿using BeyondthePagesApp.Client;
 using BeyondthePagesApp.Library.Domain;
 using Microsoft.AspNetCore.Components;
 
