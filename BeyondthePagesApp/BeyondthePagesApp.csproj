@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BeyondthePagesApp.Client\BeyondthePagesApp.Client.csproj" />
+    <ProjectReference Include="..\BeyondthePagesApp.ComponentsLibrary\BeyondthePagesApp.ComponentsLibrary.csproj" />
     <ProjectReference Include="..\BeyondthePagesApp.Library\BeyondthePagesApp.Library.csproj" />
   </ItemGroup>
 

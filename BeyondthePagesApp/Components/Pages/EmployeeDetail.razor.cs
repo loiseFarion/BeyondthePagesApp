@@ -1,6 +1,7 @@
 ﻿using BeyondthePagesApp.Client;
 using BeyondthePagesApp.Interfaces.Services;
 using BeyondthePagesApp.Library.Domain;
+using BeyondthePagesApp.Library.Model;
 using BeyondthePagesApp.Service;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.QuickGrid;
@@ -29,12 +30,22 @@ namespace BeyondthePagesApp.Components.Pages
 
         public PaginationState pagination = new() { ItemsPerPage = 10 };
 
+        public List<Marker> MapMarkers { get; set; } = new List<Marker>();
+
         protected override async Task OnInitializedAsync()
         {
             Employee = await EmployeeDataService.GetEmployeeById(EmployeeId);
             //TimeRegistrations = await TimeRegistrationDataService.GetTimeRegistrationsForEmployee(EmployeeId);
             itemsQueryable = (await TimeRegistrationDataService.GetTimeRegistrationsForEmployee(EmployeeId)).AsQueryable();
             queryableCount = itemsQueryable.Count();
+
+            if(Employee.Longitude.HasValue && Employee.Latitude.HasValue)
+            {
+                MapMarkers = new List<Marker>
+                {
+                    new Marker{Description=$"{Employee.FirstName} {Employee.LastName}", ShowPopup=false, X = Employee.Longitude.Value, Y = Employee.Latitude.Value },
+                };
+            }
         }
 
         private void ChangeHolidayState()
