@@ -1,6 +1,8 @@
 ﻿@page "/employeeadd"
+@using Microsoft.AspNetCore.Authorization
 
 <h3>Add new employee</h3>
+@attribute [Authorize]
 
 @if (!IsSaved){
     <EditForm Model="Employee" OnSubmit="OnSubmit" Enhance FormName="AddEmployeeForm">

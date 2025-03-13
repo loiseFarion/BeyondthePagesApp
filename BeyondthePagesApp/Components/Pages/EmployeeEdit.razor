@@ -1,6 +1,8 @@
 ﻿@page "/employeeedit/{EmployeeId:int}"
 @rendermode InteractiveServer
 @using BeyondthePagesApp.Library.Domain
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
 
 @if (!Saved)
 {

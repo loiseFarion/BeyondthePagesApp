@@ -3976,7 +3976,7 @@ textarea.form-control-lg {
     --bs-nav-link-font-weight:;
     --bs-nav-link-color: var(--bs-link-color);
     --bs-nav-link-hover-color: var(--bs-link-hover-color);
-    --bs-nav-link-disabled-color: #6c757d;
+    --bs-nav-link-disabled-color: #2C5F8A !important;
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
@@ -4042,7 +4042,7 @@ textarea.form-control-lg {
 
         .nav-tabs .nav-link.active,
         .nav-tabs .nav-item.show .nav-link {
-            color: var(--bs-nav-tabs-link-active-color);
+            color: #fff !important;
             background-color: var(--bs-nav-tabs-link-active-bg);
             border-color: var(--bs-nav-tabs-link-active-border-color);
         }
@@ -4073,8 +4073,8 @@ textarea.form-control-lg {
 
         .nav-pills .nav-link.active,
         .nav-pills .show > .nav-link {
-            color: var(--bs-nav-pills-link-active-color);
-            background-color: var(--bs-nav-pills-link-active-bg);
+            color: #fff !important;
+            background-color: #2C5F8A !important;
         }
 
 .nav-fill > .nav-link,
@@ -12410,7 +12410,7 @@ h6, .h6 {
     font-weight: 600;
     font-size: 16px;
     text-transform: uppercase;
-    color: #FFF;
+    color: #2C5F8A !important;
     margin-left: 20px;
 }
 

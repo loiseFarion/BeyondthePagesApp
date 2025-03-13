@@ -1,9 +1,11 @@
-﻿using BeyondthePagesApp.Library.Domain;
+﻿using BeyondthePagesApp.Auth;
+using BeyondthePagesApp.Library.Domain;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BeyondthePagesApp.Data
 {
-    public class AddDbContext : DbContext
+    public class AddDbContext : IdentityDbContext<ApplicationUser>
     {
         public AddDbContext(DbContextOptions<AddDbContext> options) : base(options)
         {
