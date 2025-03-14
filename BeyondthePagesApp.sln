@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeyondthePagesApp.Library",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeyondthePagesApp.Client", "BeyondthePagesApp.Client\BeyondthePagesApp.Client.csproj", "{5618FE09-3A16-40A1-835E-7C73A9C831D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeyondthePagesApp.ComponentsLibrary", "BeyondthePagesApp.ComponentsLibrary\BeyondthePagesApp.ComponentsLibrary.csproj", "{88C301E6-1CC4-4335-9DDA-616DEBFCDE9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeyondthePagesApp.ComponentsLibrary", "BeyondthePagesApp.ComponentsLibrary\BeyondthePagesApp.ComponentsLibrary.csproj", "{88C301E6-1CC4-4335-9DDA-616DEBFCDE9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeyondthePagesApp.Tests", "BeyondthePagesApp.Tests\BeyondthePagesApp.Tests.csproj", "{13F028D2-287E-41E3-A469-222540396060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{88C301E6-1CC4-4335-9DDA-616DEBFCDE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88C301E6-1CC4-4335-9DDA-616DEBFCDE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88C301E6-1CC4-4335-9DDA-616DEBFCDE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F028D2-287E-41E3-A469-222540396060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F028D2-287E-41E3-A469-222540396060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F028D2-287E-41E3-A469-222540396060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F028D2-287E-41E3-A469-222540396060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
